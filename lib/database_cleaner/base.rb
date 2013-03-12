@@ -36,6 +36,7 @@ module DatabaseCleaner
 
     def clean_with(*args)
       strategy = create_strategy(*args)
+      strategy.db = self.db
       strategy.clean
       strategy
     end
